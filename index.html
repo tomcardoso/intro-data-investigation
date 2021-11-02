@@ -1,0 +1,292 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<style>
+			.reveal h1 {
+				text-transform: none;
+				line-height: 1;
+			}
+			.reveal h2,
+			.reveal h3,
+			.reveal h4 {
+				text-transform: none;
+			}
+			.reveal ul {
+				margin: 0;
+			}
+			.reveal li {
+				margin-bottom: 0.5em;
+			}
+			.reveal p {
+				margin: 0;
+				margin-bottom: 0.5em;
+			}
+			.reveal em {
+				opacity: 0.6;
+			}
+			.reveal .font-small {
+				font-size: 0.8em;
+			}
+			.w30 {
+				width: 30%;
+				display: inline-block;
+			}
+			p.heading {
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+			p.small {
+				font-size: 0.5em;
+			}
+			p.color-request {
+				font-size: 0.9em;
+			}
+			span.text-red {
+				color: #e41a1c;
+			}
+			.text-blue {
+				color: #377eb8;
+			}
+			.text-green {
+				color: #4daf4a;
+			}
+			.text-purple {
+				color: #984ea3;
+			}
+			span.highlight-sky {
+				display: inline-block;
+				padding: 0 0.2em;
+				background-color: rgba(137, 202, 211, 0.5);
+			}
+			span.highlight-burgundy {
+				display: inline-block;
+				padding: 0 0.2em;
+				background-color: rgba(133, 46, 87, 0.3);
+			}
+			.pull-left {
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Introduction to data-driven investigation</h1>
+				</section>
+
+				<section>
+					<h1><a href="https://bit.ly/3pZs3mH">bit.ly/3pZs3mH</a></h1>
+				</section>
+
+				<section>
+					<p>You can also find the GitHub repository for this presentation at:</p>
+					<p><a href="https://github.com/tomcardoso/intro-data-investigation">github.com/tomcardoso/intro-data-investigation</a></p>
+				</section>
+
+				<section>
+					<h2>About me</h2>
+					<img style="width: auto; height: 35vh; margin-top: 10px;" src="img/tom.jpg" />
+					<p>Tom Cardoso, investigative reporter <br>at The Globe and Mail</p>
+					<p><a href="https://www.twitter.com/tom_cardoso">@tom_cardoso</a></p>
+				</section>
+
+				<!-- Techniques for acquiring, analyzing, and visualizing data
+				Introduction to R
+				Why is R more appropriate than Excel?
+				Examples of this in own work: CEWS, risk scores, etc.
+
+				Students already know how to use Excel and FOI -->
+
+
+
+				<!-- <section style="top: 12.5%; width: 125%; left: -12.5%;">
+					<img src="img/cover-1.jpg" alt="" style="height: 50vh;" />
+					<img src="img/cover-2.jpg" alt="" style="height: 50vh;" />
+					<img src="img/cover-3.jpg" alt="" style="height: 50vh;" />
+					<img src="img/cover-4.jpg" alt="" style="height: 50vh;" />
+				</section>
+
+				<section>
+					<p>First: A primer on prisons<br />(though I’m guessing you all know this already)</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>A sentence of <strong>two years or longer</strong> lands you in federal prison.</li>
+						<li>Roughly 12,000 to 14,000 people in custody each year.</li>
+						<li>Most prisoners don’t serve until their sentence is up — instead, they get paroled or stat released</li>
+						<li>Various institutions across the country for men and women. They’re divided into minimum-, medium- and maximum-security facilities.</li>
+						<li>We have a <strong>massive</strong> overincarceration problem for Indigenous and Black people.</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/incarceration-rates.png" alt="" style="height: 65vh;" />
+				</section>
+
+				<section>
+					<h3>Why did we focus on risk scores?</h3>
+				</section>
+
+				<section>
+					<ul>
+						<li>Within prison, <strong>risk assessments</strong> are a constant. Prisoner are repeatedly assessed and reassessed, and their life inside depends in large part on how they score</li>
+						<li>In essence, these tools are designed to measure an person’s risk to the public and their odds of rehabilitation</li>
+						<li>Work, housing, treatment programs, privileges, parole – scores affect it all</li>
+						<li>As a federal judge put it in 2015, risk scores are “like a branding – hard to overcome”</li>
+					</ul>
+				</section>
+
+				<section class="pull-left">
+					<p>While CSC’s tools don’t explicitly ask about a person’s race, they can certainly capture it by asking questions about family structure, substance use, levels of education, where a person grew up, etc.</p>
+					<p>In fact, race has previously been a <strong>direct component</strong> of risk assessments.</p>
+					<p>In 1928, Ernest Burgess, a Canadian-born University of Chicago sociologist, built a now-famous tool for the Illinois Board of Paroles that predicted a person’s odds of reoffending. One of the 22 variables used was the <strong>race of the prisoner’s father.</strong></p>
+				</section>
+
+				<section>
+					<h3>So: What are the Correctional Service of Canada’s risk assessments like?</h3>
+				</section>
+
+				<section class="pull-left">
+					<p>CSC uses two separate risk scoring approaches:</p>
+					<p><strong>Actuarial tools</strong>, which require officers to fill out a questionnaire and tally up the resulting score</p>
+					<p><strong>Structured professional judgment tools</strong>, which rely on an officer’s experience and opinion</p>
+				</section>
+
+				<section>
+					<p>Though there are many risk tools and types of scores in federal prison, two are most important: <strong>security classification</strong> and the <strong>reintegration potential score</strong>.</p>
+					<div class="">
+						<div class="w30">
+							<img src="img/CRS-pg1.jpg" alt="" style=" height: auto;" />
+							<p class="small"><em>Custody Rating Scale</em></p>
+						</div>
+						<div class="w30">
+							<img src="img/Static-1.jpg" alt="" style="height: auto;" />
+							<p class="small"><em>Static Factors</em></p>
+						</div>
+						<div class="w30">
+							<img src="img/Dynamic-1.jpg" alt="" style="height: auto;" />
+							<p class="small"><em>Dynamic Factors</em></p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<p>But…</p>
+					<p><span class="highlight-burgundy"><strong>But: Evaluating risk is tricky. Tons of room for bias.</strong></span></p>
+				</section>
+
+				<section>
+					<ul>
+						<li>Highly subjective to the assessor (low rater reliability)</li>
+						<li>Results are tough to interpret. What does it mean to have a “medium” security risk?</li>
+						<li>Experts disagree over how risk scores should be developed and administered</li>
+						<li>Current federal risk tools are <strong>old</strong>. Over time, they become less effective</li>
+						<li>Most were built off a sample of mostly white, male prisoners from the 1980s</li>
+						<li><span class="highlight-burgundy">Culturally biased</span></li>
+					</ul>
+				</section>
+
+				<section class="pull-left">
+					<p>Another major problem with risk scores is that they often rely on criminal history, which becomes a proxy for race. As Prof. Bernard Harcourt at Columbia University put it to me:</p>
+					<p><em>“You’re not predicting the actual essence of the person and their dangerousness – you’re predicting how likely it is that, because of policing disparities, they would get arrested again. … You’re not predicting crime. You’re predicting policing.”</em></p>
+					<p>In other words, being Black or Indigenous becomes a risk factor in itself.</p>
+				</section>
+
+				<section>
+					<h3>What we found</h3>
+					<p><em>After controlling for variables like age, gender, the severity of people’s offences and past contact with the criminal justice system…</em></p>
+					<p>Black men are roughly <span class="highlight-burgundy"><strong>24%</strong></span> more likely than white men to end up in maximum security at admission.</p>
+					<p>Indigenous men are roughly <span class="highlight-burgundy"><strong>30%</strong></span> more likely to have the worst reintegration score at any point.</p>
+					<p>Both are <span class="highlight-burgundy"><strong>less likely</strong></span> to reoffend after controlling for reintegration scores.</p>
+				</section>
+
+				<section>
+					<h3>Even worse for Indigenous women</h3>
+					<p>They’re roughly <span class="highlight-burgundy"><strong>64%</strong></span> more likely than white women to end up in maximum security at admission.</p>
+					<p>Also roughly <span class="highlight-burgundy"><strong>40%</strong></span> more likely to receive the worst reintegration score.</p>
+				</section>
+
+				<section>
+					<p>And, as an internal report we obtained made clear: The government had warned the Correctional Service <strong>in 2004</strong> of serious bias in its risk scores.</p>
+					<p>To this day, the risk tools used to produce those scores remain unchanged.</p>
+				</section>
+
+				<section>
+					<h3>Response and feedback</h3>
+				</section>
+
+				<section>
+					<ul>
+						<li>First story published on a Saturday. By Monday, the House of Commons’ public safety committee had announced a study of systemic racism in prison risk assessments with all-party support</li>
+						<li>Prime Minister acknowledged findings a few days later</li>
+						<li>Lawyers have used our reporting at parole hearings</li>
+						<li>Class-action lawsuit filed against the government on behalf of tens of thousands of prisoners</em></li>
+						<li>Series has won journalism awards both in Canada and abroad</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>What surprised us about what we uncovered?</h3>
+				</section>
+
+				<section>
+					<ul>
+						<li>The (quantifiable!) impact of race on people’s scores was very large</li>
+						<li>In fact, it was so large we were initially convinced we’d made a grave methodological error</li>
+						<li>Furthermore, the Correctional Service had been aware of these issues, both through a Public Safety Canada report and numerous reports from other agencies and experts, for almost two decades — but did nothing</li>
+						<li>Even parole officers we spoke with had concerns about these tools, and they use them every day!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Where does the government (and academia) go from here?</h3>
+				</section>
+
+				<section>
+					<ul>
+						<li>Given the current class-action suit, it seems unlikely CSC will voluntarily pull its risk tools any time soon</li>
+						<li>The series seems to have kicked off a conversation in some places about what a better custodial risk assessment might look like</li>
+						<li>(Do we even need one at all?)</li>
+						<li>It’s worth asking: What would a culturally-appropriate risk tool look like?</li>
+						<li>How can we mitigate and counteract the avalanche of biases faced by racialized prisoners?</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Stories</p>
+					<ul style="font-size: 0.5em;">
+						<li><a href="https://www.theglobeandmail.com/canada/article-investigation-racial-bias-in-canadian-prison-risk-assessments/">Bias behind bars: A Globe investigation finds a prison system stacked against Black and Indigenous inmates <em>(Oct. 24, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-investigation-racial-bias-in-canadian-prisons-methodology/">How we did it: How The Globe uncovered systemic bias in prisoners’ risk assessments <em>(Oct. 24, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-risk-backstory/">A shot in the dark and 185 megabytes of data: How I investigated a system of bias in Canada’s prison system <em>(Oct. 24, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-this-needs-action-ndp-experts-call-for-solutions-to-racial-bias-in/">‘This needs action’: NDP, experts call for solutions to racial bias in federal prison risk assessments <em>(Oct. 26, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-committee-mps-support-push-to-study-systemic-prison-racism/">Fight against systemic racism in prison wins all-party support <em>(Oct. 26, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-more-needs-to-be-done-to-fight-systemic-racism-in-federal-prisons/">More needs to be done to fight systemic racism in federal prisons, Justin Trudeau says <em>(Oct. 27, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-mps-ask-bill-blair-for-timeline-to-address-systemic-racism/">MPs ask Bill Blair for timeline to address systemic racism in prisons <em>(Nov. 2, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-for-indigenous-women-systemic-racial-bias-in-prison-leaves-many-worse/">For Indigenous women, systemic racial bias in prison leaves many worse off than men <em>(Dec. 31, 2020)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-inmate-risk-assessment-tool-still-in-use-16-years-after-report-calls/">Inmate risk assessment tool still in use 16 years after report raises concerns about bias against women <em>(Jan. 3, 2021)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-proposed-class-action-suit-against-ottawa-suggests-inmates-face/">Proposed class-action suit against Ottawa suggests inmates face systemic bias in risk assessments <em>(Jan. 12, 2021)</em></a></li>
+						<li><a href="https://www.theglobeandmail.com/canada/article-injunction-request-aims-to-end-prison-risk-assessment-tool-biased/">Injunction request aims to end prison risk-assessment tool biased against Indigenous people <em>(June 2, 2021)</em></a></li>
+					</ul>
+				</section> -->
+
+				<section>
+					<h3>Questions?</h3>
+				</section>
+
+			</div>
+		</div>
+		<script src="dist/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				slideNumber: true,
+				hash: true,
+				history: true
+			});
+		</script>
+	</body>
+</html>
