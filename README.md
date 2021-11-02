@@ -1,6 +1,6 @@
 # Introduction to data-driven investigation
 
-![Jean Paul Riopelle, Untitled (Stroll), 1949](https://tomcardoso.github.io/intro-data-investigation/img/riopelle.jpg)
+![Jean Paul Riopelle, Untitled (Stroll), 1949](https://github.com/tomcardoso/intro-data-investigation/blob/main/img/riopelle.jpg?raw=true)
 _Jean Paul Riopelle, Untitled (Stroll), 1949._
 
 This is the repository for a talk on conducting data-driven investigations, originally given virtually to an Advanced Data Journalism and Investigative Research class at Wilfrid Laurier University on November 2, 2021. The slides can be found here: https://tomcardoso.github.io/intro-data-investigation/
