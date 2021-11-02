@@ -94,185 +94,196 @@
 					<p><a href="https://www.twitter.com/tom_cardoso">@tom_cardoso</a></p>
 				</section>
 
-				<!-- Techniques for acquiring, analyzing, and visualizing data
-				Introduction to R
-				Why is R more appropriate than Excel?
-				Examples of this in own work: CEWS, risk scores, etc.
-
-				Students already know how to use Excel and FOI -->
-
-
-
-				<!-- <section style="top: 12.5%; width: 125%; left: -12.5%;">
-					<img src="img/cover-1.jpg" alt="" style="height: 50vh;" />
-					<img src="img/cover-2.jpg" alt="" style="height: 50vh;" />
-					<img src="img/cover-3.jpg" alt="" style="height: 50vh;" />
-					<img src="img/cover-4.jpg" alt="" style="height: 50vh;" />
+				<section>
+					<p>Some of the stuff we’ll cover today:</p>
+					<ul>
+						<li>Why use data?</li>
+						<li>Acquisition</li>
+						<li>Analysis</li>
+						<li>Visualization</li>
+						<li>Applying data to your storytelling</li>
+						<li>Story examples</li>
+						<li>Advanced techniques</li>
+					</ul>
 				</section>
 
 				<section>
-					<p>First: A primer on prisons<br />(though I’m guessing you all know this already)</p>
+					<h3>Why use data?</h3>
+				</section>
+
+				<section>
+					<p>Data can strengthen your story.</p>
+					<p>Unlike most storytelling techniques, data allows you to make non-anecdotal conclusions. Put simply, a strong data-driven finding can <strong>give you your nut graf</strong>.</p>
+				</section>
+
+				<section>
+					<p>But don’t assume your data is the truth! Data can be just as deceptive and malleable as anecdotal evidence – especially if not used carefully.</p>
+				</section>
+
+				<section>
+					<p>A technical example: Anscombe’s quartet</p>
+					<img src="img/anscombe.png" alt="Anscombe’s quartet, visualized" style="height: 60vh">
+				</section>
+
+				<section>
+					<p>The datasets used to generate all four charts have the same descriptive statistics: mean, standard deviation and correlation. Yet the datasets are clearly different!</p>
+				</section>
+
+				<section>
+					<p>A real-world example: Early coverage of mortality rates for COVID-19 infections.</p>
+					<p>Back in May, 2020, some focused on the fact that COVID-19 had killed fewer people than the flu.</p>
+					<p>This was <strong>technically true</strong> in absolute terms – early in the pandemic, an average flu year killed more people than COVID-19 had by that point. But the mortality rate for those who’d contracted COVID-19 was far greater than for the flu, meaning the disease is <strong>much deadlier</strong>.</p>
+				</section>
+
+				<section>
+					<p>A lesson when using data, then: Even the strongest-looking statistics may hide assumptions and slanted interpretations. Be careful!</p>
+				</section>
+
+				<section>
+					<h3>Acquiring data</h3>
+				</section>
+
+				<section>
+					<p>Much of your work will be in sourcing data, and then cleaning it once you’ve obtained it. There are many ways to get the info you need:</p>
 				</section>
 
 				<section>
 					<ul>
-						<li>A sentence of <strong>two years or longer</strong> lands you in federal prison.</li>
-						<li>Roughly 12,000 to 14,000 people in custody each year.</li>
-						<li>Most prisoners don’t serve until their sentence is up — instead, they get paroled or stat released</li>
-						<li>Various institutions across the country for men and women. They’re divided into minimum-, medium- and maximum-security facilities.</li>
-						<li>We have a <strong>massive</strong> overincarceration problem for Indigenous and Black people.</li>
+						<li>File a data-oriented freedom of information request. (Check out <a href="https://github.com/tomcardoso/foi-data-journalism">my talk on this here</a>.)</li>
+						<li>Use a public resource like Statistics Canada. A caveat: Their data are highly summarized and aggregated, meaning they’re less useful for detailed exploration.</li>
+						<li>Email someone – the government, an academic, etc. – and politely ask for the data you need. You’d be surprised how often this works.</li>
+						<li>Scrape it! (I’ve got a <a href="https://github.com/tomcardoso/intro-to-scraping">half-day course on this here</a>.)</li>
+						<li>Use an open data portal. (I rarely, if ever use these.)</li>
 					</ul>
 				</section>
 
 				<section>
-					<img src="img/incarceration-rates.png" alt="" style="height: 65vh;" />
+					<p>Ultimately, though, the best way to find the data you need is to <strong>pick up the phone</strong>.</p>
+					<p>Let people guide you and point you towards what kind of data you should look at for your story, where you can find it, etc.</p>
 				</section>
 
 				<section>
-					<h3>Why did we focus on risk scores?</h3>
+					<h3>Analysis</h3>
+				</section>
+
+				<section>
+					<p>Before you can really start analyzing, odds are you’ll need to clean your data in some way. Roughly 80 per cent of the total time I spend with a dataset is dedicated to cleaning up variable names, standardizing values as needed, etc.</p>
+					<p>Cleaning tasks will be different for each project, so you won’t know what you need to do until you see the file(s).</p>
+				</section>
+
+				<section>
+					<p>When analyzing your data – be it in Excel, Google Sheets, Tableau or a more advanced tool like R or Python – you should <strong>let the data guide you.</strong></p>
+					<p>Try not to make any assumptions or go in expecting certain outcomes.</p>
+				</section>
+
+				<section>
+					<p>Instead, build up your analysis step by step.</p>
+					<p>Start with simple descriptive statistics: averages, medians, etc. From there, move on to doing those operations in groups (in Excel, you’d do this in Pivot Tables, but it becomes <strong>far easier</strong> in R or Python.)</p>
+				</section>
+
+				<section>
+					<p>Once you’ve built up a feel for the data, you’ll know enough to begin “interviewing” it.</p>
+					<p>Ask questions. For instance, if you were working on a story about emergency response times, you might ask:</p>
+					<p>How often are paramedics being called to a particular postal code? How long do they take to respond to that postal code compared to their average response time? Where are they fastest? Where are they slowest?</p>
+				</section>
+
+				<section>
+					<p>As you arrive at conclusions, and especially if they’re surprising or revelatory, you should try to <strong>actively disprove your findings</strong>. Attack the same problem from the opposite perspective: Is there any way you could’ve misinterpreted the data?</p>
+					<p>This process will force you to shore up your analysis and identify any gaps in the findings.</p>
+				</section>
+
+				<section>
+					<p>Finally, <strong>document your analysis process</strong>. What steps did you take to arrive at your findings?</p>
+					<p>Consider writing a methodology story to accompany your main piece.</p>
+				</section>
+
+				<section>
+					<h3>Visualization</h3>
+				</section>
+
+				<section>
+					<p>Visualization is essential – both during analysis, and when presenting your final product.</p>
+				</section>
+
+				<section>
+					<p>During analysis, you should <strong>always</strong> be visualizing. Try to chart constantly: Your visuals will reveal hidden patterns and point at new ways to interrogate your data.</p>
+					<p>For instance…</p>
+				</section>
+
+				<section>
+					<video width="auto" height="100%" autoplay muted>
+					  <source src="img/dino.mov" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</section>
+
+				<section>
+					<p>A quick glance reveals little about what the data shows. In fact, it looks fairly random. But…</p>
+				</section>
+
+				<section>
+					<img src="img/anscombesaurus.png" alt="An image representation of a dataset that draws a dinosaur">
+				</section>
+
+				<section>
+					<p>Once you have your data collected and analysis done, it’s time to visualize. There are many tools you can use here:</p>
 				</section>
 
 				<section>
 					<ul>
-						<li>Within prison, <strong>risk assessments</strong> are a constant. Prisoner are repeatedly assessed and reassessed, and their life inside depends in large part on how they score</li>
-						<li>In essence, these tools are designed to measure an person’s risk to the public and their odds of rehabilitation</li>
-						<li>Work, housing, treatment programs, privileges, parole – scores affect it all</li>
-						<li>As a federal judge put it in 2015, risk scores are “like a branding – hard to overcome”</li>
-					</ul>
-				</section>
-
-				<section class="pull-left">
-					<p>While CSC’s tools don’t explicitly ask about a person’s race, they can certainly capture it by asking questions about family structure, substance use, levels of education, where a person grew up, etc.</p>
-					<p>In fact, race has previously been a <strong>direct component</strong> of risk assessments.</p>
-					<p>In 1928, Ernest Burgess, a Canadian-born University of Chicago sociologist, built a now-famous tool for the Illinois Board of Paroles that predicted a person’s odds of reoffending. One of the 22 variables used was the <strong>race of the prisoner’s father.</strong></p>
-				</section>
-
-				<section>
-					<h3>So: What are the Correctional Service of Canada’s risk assessments like?</h3>
-				</section>
-
-				<section class="pull-left">
-					<p>CSC uses two separate risk scoring approaches:</p>
-					<p><strong>Actuarial tools</strong>, which require officers to fill out a questionnaire and tally up the resulting score</p>
-					<p><strong>Structured professional judgment tools</strong>, which rely on an officer’s experience and opinion</p>
-				</section>
-
-				<section>
-					<p>Though there are many risk tools and types of scores in federal prison, two are most important: <strong>security classification</strong> and the <strong>reintegration potential score</strong>.</p>
-					<div class="">
-						<div class="w30">
-							<img src="img/CRS-pg1.jpg" alt="" style=" height: auto;" />
-							<p class="small"><em>Custody Rating Scale</em></p>
-						</div>
-						<div class="w30">
-							<img src="img/Static-1.jpg" alt="" style="height: auto;" />
-							<p class="small"><em>Static Factors</em></p>
-						</div>
-						<div class="w30">
-							<img src="img/Dynamic-1.jpg" alt="" style="height: auto;" />
-							<p class="small"><em>Dynamic Factors</em></p>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<p>But…</p>
-					<p><span class="highlight-burgundy"><strong>But: Evaluating risk is tricky. Tons of room for bias.</strong></span></p>
-				</section>
-
-				<section>
-					<ul>
-						<li>Highly subjective to the assessor (low rater reliability)</li>
-						<li>Results are tough to interpret. What does it mean to have a “medium” security risk?</li>
-						<li>Experts disagree over how risk scores should be developed and administered</li>
-						<li>Current federal risk tools are <strong>old</strong>. Over time, they become less effective</li>
-						<li>Most were built off a sample of mostly white, male prisoners from the 1980s</li>
-						<li><span class="highlight-burgundy">Culturally biased</span></li>
-					</ul>
-				</section>
-
-				<section class="pull-left">
-					<p>Another major problem with risk scores is that they often rely on criminal history, which becomes a proxy for race. As Prof. Bernard Harcourt at Columbia University put it to me:</p>
-					<p><em>“You’re not predicting the actual essence of the person and their dangerousness – you’re predicting how likely it is that, because of policing disparities, they would get arrested again. … You’re not predicting crime. You’re predicting policing.”</em></p>
-					<p>In other words, being Black or Indigenous becomes a risk factor in itself.</p>
-				</section>
-
-				<section>
-					<h3>What we found</h3>
-					<p><em>After controlling for variables like age, gender, the severity of people’s offences and past contact with the criminal justice system…</em></p>
-					<p>Black men are roughly <span class="highlight-burgundy"><strong>24%</strong></span> more likely than white men to end up in maximum security at admission.</p>
-					<p>Indigenous men are roughly <span class="highlight-burgundy"><strong>30%</strong></span> more likely to have the worst reintegration score at any point.</p>
-					<p>Both are <span class="highlight-burgundy"><strong>less likely</strong></span> to reoffend after controlling for reintegration scores.</p>
-				</section>
-
-				<section>
-					<h3>Even worse for Indigenous women</h3>
-					<p>They’re roughly <span class="highlight-burgundy"><strong>64%</strong></span> more likely than white women to end up in maximum security at admission.</p>
-					<p>Also roughly <span class="highlight-burgundy"><strong>40%</strong></span> more likely to receive the worst reintegration score.</p>
-				</section>
-
-				<section>
-					<p>And, as an internal report we obtained made clear: The government had warned the Correctional Service <strong>in 2004</strong> of serious bias in its risk scores.</p>
-					<p>To this day, the risk tools used to produce those scores remain unchanged.</p>
-				</section>
-
-				<section>
-					<h3>Response and feedback</h3>
-				</section>
-
-				<section>
-					<ul>
-						<li>First story published on a Saturday. By Monday, the House of Commons’ public safety committee had announced a study of systemic racism in prison risk assessments with all-party support</li>
-						<li>Prime Minister acknowledged findings a few days later</li>
-						<li>Lawyers have used our reporting at parole hearings</li>
-						<li>Class-action lawsuit filed against the government on behalf of tens of thousands of prisoners</em></li>
-						<li>Series has won journalism awards both in Canada and abroad</li>
+						<li><a href="https://www.datawrapper.de/">Datawrapper</a> (the best tool for the general public, hands down)</li>
+						<li><a href="https://flourish.studio/">Flourish</a></li>
+						<li><a href="https://rawgraphs.io/">RAW Graphs</a></li>
+						<li><a href="https://www.tableau.com/">Tableau</a></li>
+						<li>Making it yourself using Adobe Illustrator, R, Python, etc.</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>What surprised us about what we uncovered?</h3>
+					<h3>Using data in your story</h3>
 				</section>
 
-				<section>
-					<ul>
-						<li>The (quantifiable!) impact of race on people’s scores was very large</li>
-						<li>In fact, it was so large we were initially convinced we’d made a grave methodological error</li>
-						<li>Furthermore, the Correctional Service had been aware of these issues, both through a Public Safety Canada report and numerous reports from other agencies and experts, for almost two decades — but did nothing</li>
-						<li>Even parole officers we spoke with had concerns about these tools, and they use them every day!</li>
-					</ul>
-				</section>
+				<!-- <section>
 
-				<section>
-					<h3>Where does the government (and academia) go from here?</h3>
-				</section>
-
-				<section>
-					<ul>
-						<li>Given the current class-action suit, it seems unlikely CSC will voluntarily pull its risk tools any time soon</li>
-						<li>The series seems to have kicked off a conversation in some places about what a better custodial risk assessment might look like</li>
-						<li>(Do we even need one at all?)</li>
-						<li>It’s worth asking: What would a culturally-appropriate risk tool look like?</li>
-						<li>How can we mitigate and counteract the avalanche of biases faced by racialized prisoners?</li>
-					</ul>
-				</section>
-
-				<section>
-					<p>Stories</p>
-					<ul style="font-size: 0.5em;">
-						<li><a href="https://www.theglobeandmail.com/canada/article-investigation-racial-bias-in-canadian-prison-risk-assessments/">Bias behind bars: A Globe investigation finds a prison system stacked against Black and Indigenous inmates <em>(Oct. 24, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-investigation-racial-bias-in-canadian-prisons-methodology/">How we did it: How The Globe uncovered systemic bias in prisoners’ risk assessments <em>(Oct. 24, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-risk-backstory/">A shot in the dark and 185 megabytes of data: How I investigated a system of bias in Canada’s prison system <em>(Oct. 24, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-this-needs-action-ndp-experts-call-for-solutions-to-racial-bias-in/">‘This needs action’: NDP, experts call for solutions to racial bias in federal prison risk assessments <em>(Oct. 26, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-committee-mps-support-push-to-study-systemic-prison-racism/">Fight against systemic racism in prison wins all-party support <em>(Oct. 26, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-more-needs-to-be-done-to-fight-systemic-racism-in-federal-prisons/">More needs to be done to fight systemic racism in federal prisons, Justin Trudeau says <em>(Oct. 27, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-mps-ask-bill-blair-for-timeline-to-address-systemic-racism/">MPs ask Bill Blair for timeline to address systemic racism in prisons <em>(Nov. 2, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-for-indigenous-women-systemic-racial-bias-in-prison-leaves-many-worse/">For Indigenous women, systemic racial bias in prison leaves many worse off than men <em>(Dec. 31, 2020)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-inmate-risk-assessment-tool-still-in-use-16-years-after-report-calls/">Inmate risk assessment tool still in use 16 years after report raises concerns about bias against women <em>(Jan. 3, 2021)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-proposed-class-action-suit-against-ottawa-suggests-inmates-face/">Proposed class-action suit against Ottawa suggests inmates face systemic bias in risk assessments <em>(Jan. 12, 2021)</em></a></li>
-						<li><a href="https://www.theglobeandmail.com/canada/article-injunction-request-aims-to-end-prison-risk-assessment-tool-biased/">Injunction request aims to end prison risk-assessment tool biased against Indigenous people <em>(June 2, 2021)</em></a></li>
-					</ul>
 				</section> -->
+
+				<section>
+					<h3>Some examples</h3>
+				</section>
+
+				<!-- <section>
+					CEWS, Bias Behind Bars
+				</section> -->
+
+				<section>
+					<h3>Levelling up: R</h3>
+				</section>
+
+				<section>
+					<p>There are inherent limits to what Excel can do. At a certain point, your analysis will require so many steps or take so long that it’s no longer a good idea to work in Excel, Google Sheets or Tableau.</p>
+				</section>
+
+				<section>
+					<p>At that point, you should consider learning a programming language. My strong advice here (and personal preference) is <strong>R, a statistical programming language</strong> that is surprisingly easy to pick up.</p>
+					<p>With R, you can:</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>Run a complex, multi-stage analysis on gigabytes of data with millions of rows.</li>
+						<li>Easily perform tasks that are difficult when using simple spreadsheets, like joins or string manipulation.</li>
+						<li>Codify your data cleaning pipeline for a given project, which allows you to focus on analysis.</li>
+						<li>Easily create visualizations as you work.</li>
+						<li>Write scrapers to automate data collection.</li>
+						<li>Eventually apply advanced techniques, like statistical modelling and machine learning.</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>“Great! How do I learn R?”</p>
+					<p>The best introductory resource is <strong><a href="https://r4ds.had.co.nz/">R for Data Science</a></strong>.</p>
+					<p>Another great resource, meant for journalists, is <strong><a href="https://journalismcourses.org/course/introtor/">Intro to R for Journalists</a></strong>.</p>
+				</section>
 
 				<section>
 					<h3>Questions?</h3>
