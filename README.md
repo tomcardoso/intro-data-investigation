@@ -19,3 +19,4 @@ Some resources to check out:
 - [My FOI request tracking spreadsheet](https://docs.google.com/spreadsheets/d/1dKy_NL2X_u6IQhBPAy7ZFvvqYcvi5m3G4u8bB3P-hpc/)
 - [FOIs for data journalism talk](https://github.com/tomcardoso/foi-data-journalism)
 - [Introduction to enterprise journalism](https://github.com/tomcardoso/intro-enterprise-journalism)
+- [Introduction to scraping](https://github.com/tomcardoso/intro-to-scraping)
